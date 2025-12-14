@@ -1,0 +1,5 @@
+Select salesman_id, max(purchase_amount) from orders group by salesman_id;
+Select salesman_id, max(purchase_amount) from orders where order_date = TO_DATE('2012-08-17', 'YYYY-MM-DD') group by salesman_id ;
+SELECT customer_id, order_date, MAX(purchase_amount) AS "Max Amount" FROM orders GROUP BY customer_id, order_date HAVING MAX(purchase_amount) IN(2030, 3450, 5760, 6000);
+
+
