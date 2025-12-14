@@ -1,0 +1,36 @@
+/*1st Question*/
+SELECT customers.customer_name AS "Customer Name", customers.city, salesman.salesman_name AS "Salesman", salesman.comission FROM customers 
+INNER JOIN salesman  ON customers.salesman_id=salesman.salesman_id;
+
+/*2nd Question*/
+Select customer_name, city, salesman.salesman_name, salesman.grade from Customers  
+left join salesman 
+on Customers.SALESMAN_ID = salesman.SALESMAN_ID 
+where salesman.grade < 300
+order by Customers.customer_name;
+
+Select * from salesman;
+
+/*3rd Question*/
+
+Select customer_name, salesman.comission, salesman.salesman_name from customers 
+inner join salesman
+on Customers.SALESMAN_ID = salesman.SALESMAN_ID 
+where salesman.comission >12
+order by customers.customer_name;
+
+/*4th Question*/
+
+Select orders.order_no, orders.order_date, orders.purchase_amount, customers.customer_name, salesman.comission, salesman.salesman_name from ORDERS
+left join customers
+on orders.customer_id = customers.customer_id
+left join salesman
+on customers.salesman_id = salesman.salesman_id;
+
+
+
+
+
+
+
+
