@@ -1,0 +1,26 @@
+/*1st question*/
+
+SELECT o.order_no,
+       o.order_date,
+       o.purchase_amount,
+       o.customer_id,
+       o.salesman_id
+FROM orders o
+JOIN customers c
+ON o.salesman_id = c.salesman_id
+WHERE c.customer_id = 3007;
+
+
+
+/*2nd question*/
+SELECT * FROM orders
+WHERE salesman_id IN (SELECT salesman_id FROM salesman WHERE salesman_city='New York');
+
+/*3rd question*/
+SELECT grade, COUNT(*) FROM customers
+GROUP BY grade HAVING grade>(SELECT AVG(grade) FROM customers WHERE city='New York');
+
+/*4th question*/
+SELECT order_no, purchase_amount, order_date, salesman_id FROM orders
+WHERE salesman_id IN( SELECT salesman_id FROM salesman
+WHERE commission=( SELECT MAX(commission) FROM salesman));
