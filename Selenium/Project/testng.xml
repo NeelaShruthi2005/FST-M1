@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  thread-count="4" name="Test" parallel="classes">
+    <classes>
+      <class name="LMS.Activity8"/>
+      <class name="LMS.Activity7"/>
+      <class name="LMS.Activity6"/>
+      <class name="LMS.Activity5"/>
+      <class name="LMS.Activity4"/>
+      <class name="LMS.Activity3"/>
+      <class name="LMS.Activity2"/>
+      <class name="LMS.Activity1"/>
+      <class name="LMS.CommonClass"/>
+      <class name="LMS.Activity9"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
